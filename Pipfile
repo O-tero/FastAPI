@@ -9,6 +9,7 @@ uvicorn = "*"
 jinja2 = "*"
 python-multipart = "*"
 pydantic = {extras = ["email"], version = "*"}
+sqlmodel = "*"
 
 [dev-packages]
 
