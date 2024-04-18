@@ -46,8 +46,8 @@ async def delete_event(id: int, session=Depends(get_session)) -> dict:
         detail="Event with supplied ID does not exist",
     )
 
-@event_router.put("/edit/{id}"), response_model=Event)
-async def_update_event(id: int, new_data: EventUpdate), session=Depends(get_session)) -> Event:
+@event_router.put("/edit/{id}", response_model=Event)
+async def_update_event(id: int, new_data: EventUpdate), session=Depends(get_session) -> Event:
     event = session.get(Event, id)
     if event:
         event_data = new_data.dict(exclude_unset=True)
