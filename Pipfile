@@ -11,6 +11,7 @@ python-multipart = "*"
 pydantic = {extras = ["email"], version = "*"}
 sqlmodel = "*"
 beanie = "*"
+passlib = {extras = ["bcrypt"], version = "*"}
 
 [dev-packages]
 
