@@ -26,9 +26,11 @@ app = FastAPI()
 app.include_router(user_router, prefix="/user")
 app.include_router(event_router, prefix="/event")
 
+
 @app.on_event("startup")
 def on_startup():
     conn()
+
 
 @app.get("/")
 async def home():
